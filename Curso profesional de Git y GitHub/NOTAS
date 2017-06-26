@@ -1,0 +1,80 @@
+SVN= Apache Subversion (abreviado frecuentemente como SVN, por el comando svn)
+es una herramienta de control de versiones open source basada en un repositorio
+ cuyo funcionamiento se asemeja enormemente al de un sistema de ficheros.
+ Es software libre bajo una licencia de tipo Apache/BSD.
+
+ -- COMANDOS GIT ---
+
+1) directoriodelproyecto#git init // Inicializa un repositorio de git es el primer paso para crear nuestro primer commit.
+2) directoriodelproyecto#git status // Nos permite saber que archivos estan preparados "Working directory"
+
+- mover los archivos a la area de preparacion o Stating area
+3) directoriodelproyecto#git add filename move oly file
+4) directoriodelproyecto#git add -A move all project files
+
+- move the project to the repository
+
+5) directoriodelproyecto#git commit -m "message about commit"
+6) git log
+
+-- SAVE
+
+commit 1ddda021fcb2eabec99af21698e6f4c2ae67d36f
+Author: Wilmer Moina <wilmermoinar@gmail.com>
+Date:   Sun Apr 9 22:55:45 2017 -0500
+
+    123
+
+commit 77ea0a36d51cd1922fb56f428e5cd9a9893ef9fd
+Author: Wilmer Moina <wilmermoinar@gmail.com>
+Date:   Sun Apr 9 22:55:24 2017 -0500
+
+    2
+
+commit 2dc0b6ce03915996d5de83ead176fe1ee85c449d
+Author: Wilmer Moina <wilmermoinar@gmail.com>
+Date:   Sun Apr 9 22:54:40 2017 -0500
+
+    1
+
+commit dbcca77aa2d98502914e91f2ecb39c068dc7f73e
+Author: Wilmer Moina <wilmermoinar@gmail.com>
+Date:   Sun Apr 9 22:35:01 2017 -0500
+
+    Edici<C3><B3>n de pagina 1 de 1
+
+commit 188ddb9c8dcc387ea1912cb9eebf08a25cfeb960
+Author: Wilmer Moina <wilmermoinar@gmail.com>
+Date:   Sun Apr 9 22:16:43 2017 -0500
+
+    Nombre y descripcion agregados
+
+commit 802863d7ae72c2a92980e879170a019d45a69274
+Author: Wilmer Moina <wilmermoinar@gmail.com>
+Date:   Sun Apr 9 22:05:18 2017 -0500
+
+- return of the time
+----RESET
+
+Hard: Working Directory = Staging Area = Repository
+7) $ git reset --hard [SHA commit]
+
+Mixed: Staging Area = Repository. Nada con Working Directory. Iteración básica.
+8) $ git reset --mixed [SHA commit]
+
+Soft: Cambios sólo en el "Repository". Staging = Working
+$ git reset --soft [SHA commit]
+
+
+2. RAMAS
+
+Una rama es una línea alterna del tiempo, en la historia de nuestro repositorio.
+
+Funciona para crear features, arreglar bugs, experimentar, sin afectar la versión estable, la línea principal, del proyecto.
+
+HEAD= El concepto HEAD
+¿En qué punto de la historia de nuestro proyecto nos encontramos?
+
+
+reitificar commit 
+git commit -am "Descripcion cambiada" --amend
